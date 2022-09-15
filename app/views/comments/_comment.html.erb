@@ -1,0 +1,4 @@
+<div class="comment" id="post_<%= comment.post.comments.last.id %>">
+  <%= comment.content %>
+  <span class="time"><%= time_tag comment.created_at, "data-local": "time-ago" %></span>
+</div>

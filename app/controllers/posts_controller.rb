@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
+  def home
+    render 'home'
+  end
   # GET /posts or /posts.json
   def index
     @posts = Post.all
@@ -56,6 +59,7 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
